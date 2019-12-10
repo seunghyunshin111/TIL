@@ -92,8 +92,8 @@
 ># 항상 깨끗한 상태에서 pull 하기
 >
 >git pull origin master
-># clone: 맨 처음만!
-># Pull
+># clone: 맨 처음 Repositories download 때 만!
+># Pull: 그 다음은 계속 Pull
 >```
 >
 >```bash
