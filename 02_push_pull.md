@@ -42,11 +42,15 @@
 >
 > git log --oneline
 >
+> Q : 명령 메시지 (master) 창으로 불러옴
+>
 > ---
 >
 > git remote add origin **Repositories adress**
 >
 > git remote -v  : 확인
+
+
 
 
 
@@ -101,6 +105,8 @@
 >cat file.txt
 ># 내용 볼 수 있음
 >```
+
+
 
 
 
