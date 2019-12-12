@@ -22,7 +22,7 @@ def greeting(name):
     return f'Hello, {name}!'
 
 @app.route('/cube/<int:num>')
-def cube(num1):
+def cube(num):
     result = num**3
     return str(result)
 
