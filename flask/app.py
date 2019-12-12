@@ -98,8 +98,8 @@ def lotto_result():
     response = requests.get(f'https://dhlottery.co.kr/common.do?method=getLottoNumber&drwNo={lotto_round}')
     lotto = response.json()
 
-    winner = []
 
+    winner = []
     # 1. for문을 활용한다.
     for i in range(1, 7):
         winner.append(lotto[f'drwtNo{i}'])
@@ -132,8 +132,8 @@ def lotto_result():
     # 2. List Comprehension
     # winner = [lotto[f'drwtNo{i}']] for i in range(1,7)]
 
-    # drwtNo6 = lotto["drwtNo6"] # Error가 뜸
-    # drwtNo6 = lotto.get("drwtNo6") # None이 나옴, 이것을 권장
+    # drwtNo6 = lotto["drwtNo6"] # Error가 뜸(?)
+    # drwtNo6 = lotto.get("drwtNo6") # None이 나옴, 이것을 권장(?)
 
 
     return render_template('lotto_result.html',
