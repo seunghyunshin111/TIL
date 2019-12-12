@@ -95,7 +95,7 @@ def lotto_result():
 
 
     lotto_round = request.args.get('lotto_round')
-    response = request.get(f'https://dhlottery.co.kr/common.do?method=getLottoNumber&drwNo={lotto_round}')
+    response = requests.get(f'https://dhlottery.co.kr/common.do?method=getLottoNumber&drwNo={lotto_round}')
     lotto = response.json()
 
     winner = []
@@ -107,10 +107,10 @@ def lotto_result():
 
     numbers = request.args.get('numbers') # string
     numbers = numbers.split() # list - ['1', '2', '3']
+    
     numbers_int = []
-
     for number in numbers:
-        numbers_int.append(int(numbers))
+        numbers_int.append(int(number))
 
     matched = len(set(winner) & set(numbers_int)) # 두 리스트의 교집합 찾기(일치하는 로또 번호 찾기)
 
